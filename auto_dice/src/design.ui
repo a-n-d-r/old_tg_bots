@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>361</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>361</width>
+    <height>605</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>361</width>
+    <height>605</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::ClickFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>AutoDice v1.1</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>dice3.ico</normaloff>dice3.ico</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>30</width>
+    <height>30</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="autodice">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <widget class="QGroupBox" name="tg_api_settings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>341</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Настройки telegram api</string>
+    </property>
+    <widget class="QLabel" name="api_hash_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Serif Georgian</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>api_hash</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="api_id_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>60</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Serif Georgian</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>api_id</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="api_hash">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>60</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>f2058af1206920ca00f17d483f11983d</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="api_id">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>30</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>1872634</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="script_log">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>341</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Лог скрипта</string>
+    </property>
+    <widget class="QTextBrowser" name="log">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>321</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="openLinks">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="script_settings">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>341</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Настройки скрипта</string>
+    </property>
+    <widget class="QLineEdit" name="chat_id">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>85</y>
+       <width>211</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>-1001438070264</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="chat_id_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Serif Georgian</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>ID чата</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="min_value">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>25</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>6</number>
+     </property>
+     <property name="value">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start_button">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>321</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Запуск</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="min_value_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Serif Georgian</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Минимальное значение кости</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dice_type_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Serif Georgian</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Тип кости</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="dice_type">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>55</y>
+       <width>211</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Trebuchet MS</family>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="maxVisibleItems">
+      <number>3</number>
+     </property>
+     <property name="maxCount">
+      <number>3</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>кубик</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>дартс</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>баскетбол</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="about_coder">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>341</width>
+      <height>145</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <stylestrategy>PreferDefault</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="title">
+     <string>О создателе</string>
+    </property>
+    <widget class="QLabel" name="coded_by">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>321</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Terminal</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <strikeout>false</strikeout>
+       <stylestrategy>PreferDefault</stylestrategy>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::NoFocus</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>Coded by andr</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="web_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Trebuchet MS</family>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferDefault</stylestrategy>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>WWW:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="web_button">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>50</y>
+       <width>231</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>@andr</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tg_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Trebuchet MS</family>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferDefault</stylestrategy>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>Telegram:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="tg_button">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>231</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>@andr</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="qiwi_label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Trebuchet MS</family>
+       <pointsize>10</pointsize>
+       <stylestrategy>PreferDefault</stylestrategy>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="text">
+      <string>QIWI:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="qiwi_button">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>110</y>
+       <width>231</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Купи мне дошик ;)</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

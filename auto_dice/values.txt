@@ -1,0 +1,4 @@
+api_id = 12345
+api_hash = token
+
+Chat Name = -10012345
